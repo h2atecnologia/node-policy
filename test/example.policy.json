@@ -1,4 +1,46 @@
 [
-  {"rule":"allow","participant":"*","resource":"*","action":"*"},
-  {"rule":"deny","participants":["john.doe"],"resources":["example"],"actions":["do-something"]}
+  {
+    "rule": "allow",
+    "participant": "*",
+    "resource": "*",
+    "action": "*"
+  },
+  {
+    "rule": "deny",
+    "participants": [
+      "john.doe"
+    ],
+    "resources": [
+      "example"
+    ],
+    "actions": [
+      "do-something"
+    ]
+  },
+  {
+    "rule": "allow",
+    "participant": "guest",
+    "resource": "secret1",
+    "action": "testar",
+    "conditions": {
+      "and": [
+        {
+          ">": [
+            {
+              "var": "age"
+            },
+            5
+          ]
+        },
+        {
+          "<": [
+            {
+              "var": "age"
+            },
+            15
+          ]
+        }
+      ]
+    }
+  }
 ]
