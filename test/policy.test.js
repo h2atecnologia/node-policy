@@ -98,6 +98,56 @@ describe("policy", () => {
     });
   });
 
+  it("should allow valid condition", () => {
+    let policy = new Policy();
+    policy.allow("guest", "secret1", "testar", {
+      "and": [
+        {
+          ">": [
+            {
+              "var": "age"
+            },
+            5
+          ]
+        },
+        {
+          "<": [
+            {
+              "var": "age"
+            },
+            15
+          ]
+        }
+      ]
+    });
+    assert.ok(policy.isAllowed("guest", "secret1", "testar", { age: 6 }));
+  });
+
+  it("should not allow invalid condition", () => {
+    let policy = new Policy();
+    policy.allow("guest", "secret1", "testar", {
+      "and": [
+        {
+          ">": [
+            {
+              "var": "age"
+            },
+            5
+          ]
+        },
+        {
+          "<": [
+            {
+              "var": "age"
+            },
+            15
+          ]
+        }
+      ]
+    });
+    assert.ok(!policy.isAllowed("guest", "secret1", "testar", { age: 26 }));
+  });
+
   describe("append", () => {
     it("should append two policy", () => {
       let policy = new Policy();
