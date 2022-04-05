@@ -4,6 +4,14 @@
 
 Library for controlling access to resources with policy documents. Inspired by AWS IAM policies.
 
+## Todo
+
+Maybe:
+- Route-Specific Middlewares Support (Express, Fastify, Hyper-Express, Socket.IO)
+- Redis backend support
+- MongoDB backend support
+- ( ... )
+
 # Installation
 
 ```
