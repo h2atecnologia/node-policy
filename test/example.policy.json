@@ -2,7 +2,7 @@
   {
     "rule": "allow",
     "participant": "*",
-    "resource": "*",
+    "resource": "bb:*",
     "action": "*"
   },
   {

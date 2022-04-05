@@ -1,5 +1,5 @@
 const assert = require("assert");
-const Policy = require("../").Policy;
+const Policy = require("../");
 
 describe("policy", () => {
   it("should validate simple rules", () => {
@@ -146,6 +146,23 @@ describe("policy", () => {
       ]
     });
     assert.ok(!policy.isAllowed("guest", "secret1", "testar", { age: 26 }));
+  });
+
+  it("should allow valid new policies", () => {
+    let policy = new Policy();
+    // participantPatterns, resourcePatterns, actionPatterns, conditions
+    policy.allow("user:salesman:*", "bb:sales:*:pos", ["sales:vender", "sales:ver"]);
+    assert.ok(policy.isAllowed("user:salesman:83757575", "bb:sales:*:pos", "sales:vender"));
+    assert.ok(policy.isAllowed("user:salesman:83757575", "bb:sales:*:pos", "sales:ver"));
+    assert.ok(!policy.isAllowed("user:salesman:83757575", "bb:sales:*:pos", "sales:mexer"));
+    assert.ok(policy.isAllowed("user:salesman:83757575", "bb:sales:*:pos", "sales:*"));
+    assert.ok(!policy.isAllowed("user:salesman:83757575", "bb:*:*:payment", "sales:*"));
+
+    let policy2 = new Policy();
+    policy2.allow("*", "*", ["sales:vender", "sales:ver"]);
+    assert.ok(policy2.isAllowed("user:salesman:83757575", "bb:*:*:payment", "sales:ver"));
+    assert.ok(!policy2.isAllowed("user:salesman:83757575", "bb:*:*:payment", "sales:xx"));
+
   });
 
   describe("append", () => {

@@ -1,10 +1,15 @@
 const assert = require("assert");
 const path = require("path");
-const parser = require("../").parser;
+const Policy = require("../");
 
 describe("parser", () => {
-  it("should load and validate policy", () => {
-    let policy = parser.fromFile(path.join(__dirname, "/example.policy.json"));
-    assert.ok(policy.isAllowed("customer", "cars", "buy"));
+  let policy = Policy.fromFile(path.join(__dirname, "/example.policy.json"));
+  it("should load w/no error", () => {
+    assert.ok(!(policy instanceof Error));
   });
+  if (policy instanceof Policy) {
+    it("...and validate policy", () => {
+      assert.ok(policy.isAllowed("customer", "bb:cars", "buy"));
+    });
+  }
 });
