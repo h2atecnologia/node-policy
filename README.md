@@ -108,5 +108,5 @@ policy.isAllowed('guest', 'blah', 'write', { age: 16 }); // false
 
 ### It's (always) all about Javascript. (NodeJS too!)
 
-#####*Yes! semicolon matters ... and I prefer single quotes*
+##### *Yes! semicolon matters ... and I prefer single quotes*
 
