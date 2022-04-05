@@ -6,8 +6,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/issues)
 [![GitHub stars](https://img.shields.io/github/stars/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/stargazers)
 [![GitHub license](https://img.shields.io/github/license/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/h2atecnologia/node-policy.svg?branch=master)](https://travis-ci.org/h2atecnologia/node-policy)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/h2atecnologia/node-policy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/h2atecnologia/node-policy/context:javascript)
 
 </div>
 
