@@ -24,7 +24,7 @@ Library for controlling access to resources with policy documents. Inspired by A
 ## Todo
 
 Maybe:
-- [ ] get rules (export to json)
+- [x] get rules (export to json, save json to file)
 - [ ] remove one rule / remove all rules
 - [ ] Route-Specific Middlewares Support (Express, Fastify, Hyper-Express, Socket.IO)
 - [ ] Redis backend support
@@ -45,13 +45,24 @@ const Policy = require('policy');
 let policy1 = new Policy();
 
 // create a instance from fromFile() static method
-let policy2 = Policy.fromFile(...);
+let policy2 = Policy.fromFile('./somePath/someFilename.json');
 
 // create a instance from fromString() static method
-let policy3 = Policy.fromString(...);
+let policy3 = Policy.fromString(string);
 
 // append rules from instance policy into policy instance
-polic1.append(policy3);
+polic1.append(policy2);
+
+// or pass many policies to append
+polic1.append(policy2, policy3, ...);
+
+// export rules to a json
+let json = polic1.toJson();
+
+// save rules from policy to file
+polic1.toFile('./somePath/someFilename.json', true); // beautify
+polic1.toFile('./somePath/someFilename.json', false); // no beautify
+polic1.toFile('./somePath/someFilename.json'); // no beautify
 ```
 
 For example how to format policy document see [json example file](https://github.com/h2atecnologia/node-policy/blob/master/test/example.policy.json)
