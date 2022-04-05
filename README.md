@@ -3,8 +3,6 @@
 <div align="left">
 
 [![NPM version](https://img.shields.io/github/package-json/v/h2atecnologia/node-policy/master.svg?style=flat)](https://github.com/h2atecnologia/node-policy)
-<!--[![NPM downloads](https://img.shields.io/npm/dm/node-policy.svg?style=flat)](https://www.npmjs.com/package/node-policy)-->
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/h2atecnologia/node-policy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/h2atecnologia/node-policy/context:javascript)
 [![GitHub issues](https://img.shields.io/github/issues/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/issues)
 [![GitHub stars](https://img.shields.io/github/stars/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/stargazers)
 [![GitHub license](https://img.shields.io/github/license/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/blob/master/LICENSE)
