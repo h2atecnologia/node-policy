@@ -29,7 +29,7 @@ polic1.append( policy3 );
 
 For example how to format policy document see [json example file](https://github.com/h2atecnologia/node-policy/blob/master/test/example.policy.json)
 
-# Example
+# Examples
 
 ```
 let policy = new Policy();
