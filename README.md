@@ -100,9 +100,7 @@ policy.isAllowed('user', 'blah', 'read'), { age: 6 }; // true
 policy.isAllowed('guest', 'blah', 'write', { age: 16 }); // false
 ```
 
-# It's (always) all about javascript. (nodejs too!)
+### It's (always) all about Javascript. (NodeJS too!)
 
-## Yes! semicolon matters.
-
-### I prefer single quotes. And you?
+#####*Yes! semicolon matters ... and I prefer single quotes*
 
