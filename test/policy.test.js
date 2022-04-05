@@ -151,16 +151,16 @@ describe('policy', () => {
   it('should allow valid new policies', () => {
     let policy = new Policy();
     // participantPatterns, resourcePatterns, actionPatterns, conditions
-    policy.allow('user:salesman:*', 'bb:sales:*:pos', ['sales:vender', 'sales:ver']);
-    assert.ok(policy.isAllowed('user:salesman:83757575', 'bb:sales:*:pos', 'sales:vender'));
-    assert.ok(policy.isAllowed('user:salesman:83757575', 'bb:sales:*:pos', 'sales:ver'));
+    policy.allow('user:salesman:*', 'bb:sales:*:pos', ['sales:sale', 'sales:view']);
+    assert.ok(policy.isAllowed('user:salesman:83757575', 'bb:sales:*:pos', 'sales:sale'));
+    assert.ok(policy.isAllowed('user:salesman:83757575', 'bb:sales:*:pos', 'sales:view'));
     assert.ok(!policy.isAllowed('user:salesman:83757575', 'bb:sales:*:pos', 'sales:mexer'));
     assert.ok(policy.isAllowed('user:salesman:83757575', 'bb:sales:*:pos', 'sales:*'));
     assert.ok(!policy.isAllowed('user:salesman:83757575', 'bb:*:*:payment', 'sales:*'));
 
     let policy2 = new Policy();
-    policy2.allow('*', '*', ['sales:vender', 'sales:ver']);
-    assert.ok(policy2.isAllowed('user:salesman:83757575', 'bb:*:*:payment', 'sales:ver'));
+    policy2.allow('*', '*', ['sales:sale', 'sales:view']);
+    assert.ok(policy2.isAllowed('user:salesman:83757575', 'bb:*:*:payment', 'sales:view'));
     assert.ok(!policy2.isAllowed('user:salesman:83757575', 'bb:*:*:payment', 'sales:xx'));
 
   });
