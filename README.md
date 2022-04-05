@@ -1,5 +1,3 @@
-# policy
-
 <div align="left">
 
 [![NPM version](https://img.shields.io/github/package-json/v/h2atecnologia/node-policy/master.svg?style=flat)](https://github.com/h2atecnologia/node-policy)
@@ -8,6 +6,8 @@
 [![GitHub license](https://img.shields.io/github/license/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/blob/master/LICENSE)
 
 </div>
+
+# policy
 
 Library for controlling access to resources with policy documents. Inspired by AWS IAM policies.
 
@@ -61,6 +61,7 @@ polic1.append(policy2, policy3, ...);
 let json = polic1.toJson();
 
 // save rules from policy to file
+// return undefined or error
 polic1.toFile('./somePath/someFilename.json', true); // beautify
 polic1.toFile('./somePath/someFilename.json', false); // no beautify
 polic1.toFile('./somePath/someFilename.json'); // no beautify
