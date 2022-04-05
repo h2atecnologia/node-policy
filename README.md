@@ -24,6 +24,7 @@ Library for controlling access to resources with policy documents. Inspired by A
 ## Todo
 
 Maybe:
+- [x] append supports a list of policies
 - [x] get rules (export to json, save json to file)
 - [ ] remove one rule / remove all rules
 - [ ] Route-Specific Middlewares Support (Express, Fastify, Hyper-Express, Socket.IO)
