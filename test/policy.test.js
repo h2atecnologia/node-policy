@@ -172,7 +172,10 @@ describe("policy", () => {
       let policy2 = new Policy();
       policy2.deny("guest", "secret", "*");
 
-      policy.append(policy2);
+      let policy3 = new Policy();
+      policy3.deny("guest2", "secret2", "*");
+
+      policy.append(policy2, policy3);
 
       assert.ok(policy.isAllowed("user", "blah", "read"));
       assert.ok(policy.isAllowed("guest", "blah", "write"));
