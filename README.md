@@ -14,19 +14,19 @@ Library for controlling access to resources with policy documents. Inspired by A
 ## WIP/Done
 
 - [ ] code cleanup/refactoring
-- [ ] replace double quotes by single
-- [ ] check semicolon
+- [X] replace double quotes by single
+- [X] check semicolon
 - [x] add conditions (JsonLogic based)
 - [x] merge Policy class + parser => Policy static methods
 - [ ] replace/better checkRules logic (inserting matcher)
-- [ ] use notation to enhance filter on rules
 
 ## Todo
 
-Maybe:
+New features:
 - [x] append supports a list of policies
 - [x] get rules (export to json, save json to file)
 - [ ] remove one rule / remove all rules
+- [ ] use Notation to enhance filter on rules
 - [ ] Route-Specific Middlewares Support (Express, Fastify, Hyper-Express, Socket.IO)
 - [ ] Redis backend support
 - [ ] MongoDB backend support
