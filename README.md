@@ -1,6 +1,15 @@
 # policy
 
+<div align="left">
+
+<!--[![NPM version](https://img.shields.io/npm/v/hyper-express.svg?style=flat)](https://www.npmjs.com/package/hyper-express)-->
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/h2atecnologia/node-policy.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/kartikk221/hyper-express/context:javascript)
+[![GitHub issues](https://img.shields.io/github/issues/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/issues)
+[![GitHub stars](https://img.shields.io/github/stars/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/stargazers)
+[![GitHub license](https://img.shields.io/github/license/h2atecnologia/node-policy)](https://github.com/h2atecnologia/node-policy/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/h2atecnologia/node-policy.svg?branch=master)](https://travis-ci.org/h2atecnologia/node-policy)
+
+</div>
 
 Library for controlling access to resources with policy documents. Inspired by AWS IAM policies.
 
@@ -9,7 +18,6 @@ Library for controlling access to resources with policy documents. Inspired by A
 Maybe:
 - get rules (export to json)
 - remove one rule / remove all rules
-
 - Route-Specific Middlewares Support (Express, Fastify, Hyper-Express, Socket.IO)
 - Redis backend support
 - MongoDB backend support
