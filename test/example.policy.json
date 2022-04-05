@@ -19,10 +19,26 @@
   },
   {
     "rule": "allow",
+    "participants": [
+      "jane.doe"
+    ],
+    "resources": [
+      "example2"
+    ],
+    "actions": [
+      "do-something2"
+    ],
+    "conditions": [
+      { "===" : [1, 1] },
+      { "!==" : [2, 1] }
+    ]
+  },
+  {
+    "rule": "allow",
     "participant": "guest",
     "resource": "secret1",
     "action": "testar",
-    "conditions": {
+    "condition": {
       "and": [
         {
           ">": [

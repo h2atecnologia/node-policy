@@ -11,15 +11,25 @@
 
 Library for controlling access to resources with policy documents. Inspired by AWS IAM policies.
 
+## WIP/Done
+
+- [ ] code cleanup/refactoring
+- [ ] replace double quotes by single
+- [ ] check semicolon
+- [x] add conditions (JsonLogic based)
+- [x] merge Policy class + parser => Policy static methods
+- [ ] replace/better checkRules logic (inserting matcher)
+- [ ] use notation to enhance filter on rules
+
 ## Todo
 
 Maybe:
-- get rules (export to json)
-- remove one rule / remove all rules
-- Route-Specific Middlewares Support (Express, Fastify, Hyper-Express, Socket.IO)
-- Redis backend support
-- MongoDB backend support
-- (...)
+- [ ] get rules (export to json)
+- [ ] remove one rule / remove all rules
+- [ ] Route-Specific Middlewares Support (Express, Fastify, Hyper-Express, Socket.IO)
+- [ ] Redis backend support
+- [ ] MongoDB backend support
+- [ ] (...)
 
 # Installation
 
